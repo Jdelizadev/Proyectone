@@ -1,0 +1,61 @@
+
+En css grid es crear grillas como le dicen todos, que es basicamente, crear rows o sea filas, columnas, con las propiedades grid template row o columns, le puedes decir, cuantas rows o columns quieres, y las dimensiones de cada una.
+grid auto row, sirve para fijar una dimension y que las filas que se vayan creando automaticamente, sean de las dimensiones que especificamos, y es el mismo caso con auto columns.
+grit auto flow, column o row, es para indicar el orden en que queremos que se rellene la grilla (cuadricula), es decir, 123 en linea y 456 en otro por ejemplo o 135 y 246 en otra.
+
+Propiedades para la alineación de los items (elementos):
+Estas propiedades se asignan al contenedor para ajustar los elementos que este contiene, termina en items
+
+Justify-items para ajustar horizontalmente
+Align-items para ajustar verticalmente
+Place-items combinacion de ambas dos
+
+Propiedades para la alineación del container(El Contenedor):
+Los estilos que proporciona son los mismos solo que estos son para ajustar el contenedor completo como unidad de bloque, termina en content
+
+Justify-content
+Align-content
+Place-content
+
+Propiedades para la alineación de un solo item individual
+Esti es para ajustar el contenido individual de la grilla y poder estilizar más
+
+Justify-self
+Align-self
+Place-self
+
+
+Propieades de ubicación (para las columnas)(columns)
+
+Grid-column-start
+
+Grid-column-end
+
+simplifica las de start y end Grid-column
+
+Propieades de ubicación (para las filas (rows))
+
+Grid-row-start
+Grid-row-end
+Simplifica las el grid-start y end
+
+Grid-row
+Definimos las 4 ubicaciones donde comienza y terminan las filas y columnas
+
+Inicia en la row 2 y column 2 | termina en la 4 y 4
+
+Grid-area: 2 /2 / 4 / 4;
+
+el minmax(20px , 100px) sirve para declarar el minimo que queremos que tenga de dimension nuestra fila o columna, de este modo si se le agrega contenido, puede agrandarse automaticamente sin que el contenido se salga de la celda.
+el repeat(4, auto) nos rive para repetir las medidas de una fila o celda, las veces que lo asignemos y en la medida que lo asignemos, asi en caso de que sean muchas no debemos escibir una por una
+
+fr: La medida se refiere a una fraccion, lo que significa que si asignamos un ancho de 400 px a nuestra grilla por ejemplo, y aginamos un repeat 4 1fr por ejemplo, se va a dividir el espacio en partes iguales a cada columna
+
+min-content: esta medida, lo que hace es que siempre se mantenga en el minimo necesario para mostrar el contenido que pusimos dentro
+
+max-content: esta por el contrario, siempre muestra la columna o fila, con el maximo espacio posible 
+
+auto-fit: esta propiedad hace que las columnas se ajusten automaticamente para que las celdas usen el 100% de la grilla
+
+auto-fil: crea celdas invsibles para rellenar el espacio que falta para cubrir el 100% de la grilla
+NOTA: Ambos metodos requierend de un minmax() para poder funcionar

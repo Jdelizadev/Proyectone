@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css</title>
+    <style>
+
+        .container {
+            border: solid 8px brown;
+            display: grid;
+            place-content: center;
+            grid-template-columns: 150px 150px 150px;
+            grid-template-rows: 80px 80px 80px;
+            background-color: white;
+
+            grid-template-areas:
+            "header header header"
+            "side main main"
+            "side main main";
+        }
+        .item1 {
+            border: solid 4px pink;
+            background-color: green;
+            grid-column: 1 / 4;
+            grid-area: header;
+        }
+        .item2 {
+            border: solid 4px pink;
+            background-color: green;
+            grid-row: 2 / 4;
+            grid-area: side;
+        }
+        .item3 {
+            border: solid 4px pink;
+            background-color: green;
+            grid-area: 2 / 2 / 4 / 4;
+            grid-area: main;
+        }
+
+        .container2 {
+            border: solid 8px brown;
+            display: grid;
+            place-content: center;
+            grid-template-columns: 150px 150px 150px;
+            grid-template-rows: 80px 80px 80px;
+            background-color: white;
+
+            grid-template-areas:
+            "one two two"
+            "three three four"
+            "five six seven";
+        }
+        .item11 {
+            border: solid 4px pink;
+            background-color: green;
+            grid-area: one;
+        }
+        .item22{
+            border: solid 4px pink;
+            background-color: green;
+            grid-area: two;
+        }
+        .item33 {
+            border: solid 4px pink;
+            background-color: green;
+            grid-area: three;
+        }
+        .item44 {
+            border: solid 4px pink;
+            background-color: green;
+            grid-area: four;
+        }
+        .item55 {
+            border: solid 4px pink;
+            background-color: green;
+            grid-area: five;
+        }
+        .item66 {
+            border: solid 4px pink;
+            background-color: green;
+            grid-area: six;
+        }
+        .item77 {
+            border: solid 4px pink;
+            background-color: green;
+            grid-area: seven;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+    </div>
+
+    <div class="container2">
+        <div class="item item11">1</div>
+        <div class="item item22">2</div>
+        <div class="item item33">3</div>
+        <div class="item item44">4</div>
+        <div class="item item55">5</div>
+        <div class="item item66">6</div>
+        <div class="item item77">7</div>
+    </div>
+</body>
+</html>

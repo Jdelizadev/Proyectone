@@ -1,0 +1,13 @@
+{
+  "name": "cssraindetest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Jaime De Lizaola <jaimedelizaola@gmail.com>",
+  "license": "ISC",
+  "type": "commonjs"
+}

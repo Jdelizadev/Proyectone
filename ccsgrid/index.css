@@ -1,0 +1,126 @@
+ *{
+    font-family: 'Quicksand', sans-serif;
+ }
+
+ main {
+    max-width: 1200px;
+    margin: 0 auto;
+    border: solid 3px rgb(205, 200, 200);
+    border-radius: 8px;
+ }
+ 
+ .hero__container {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-auto-rows: 400px;
+ }
+
+  .hero__info {
+    place-self: center;
+    h1 {
+        margin-bottom: 40px;
+    }
+    p {
+        margin-bottom: 25px;
+    }
+    button {
+        font-weight: 500;
+        color: white;
+        border-radius: 10px;
+        background-color: grey;
+        border: none;
+        width: 115px;
+        height: 40px;
+        margin-top: 20px;
+        margin-left: 35px;
+        margin-bottom: 40px;
+        cursor: pointer;
+    }
+  } 
+
+ .hero__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    /* Esta propiedad ajusta la imagen al contenedor para que se vea completa */
+ }
+
+ .services__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);   
+    grid-template-rows: 100px 200px 200px; 
+    grid-template-areas:
+    'title title title title'
+    'imglg imglg imgsm1 imgsm2'
+    'imglg imglg imgsm3 imgsm4'
+    ;
+    margin: 80px 20px 20px 20px;
+    gap: 20px;
+ }
+
+ .services__text {
+    grid-area: title;
+    place-self: center;
+    font-size: 2rem;
+    margin-bottom: 50px;
+ }
+ .services__lgimg {
+    grid-area: imglg;
+    width: 100%;
+    height: 100%;
+ }
+ .services__smimg1 {
+    grid-area: imgsm1;
+    width: 100%;
+    height: 100%;
+ }
+ .services__smimg2 {
+    grid-area: imgsm2;
+    width: 100%;
+    height: 100%;
+ }
+ .services__smimg3 {
+    grid-area: imgsm3;
+    width: 100%;
+    height: 100%;
+ }
+ .services__smimg4 {
+    grid-area: imgsm4;
+    width: 100%;
+    height: 100%;
+ }
+
+ .menu__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px, 200px));
+    grid-auto-rows: 150px;
+    gap: 10px;
+    margin: 20px;
+ }
+
+ .menu__img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+ }
+
+ .menu__text {
+    font-size: 2rem;
+    margin: 50px;
+    place-self: center;
+    margin-top: 100px;
+ }
+
+ @media screen and (max-width: 768px) {
+      .hero__container {
+         grid-template-columns: minmax(300px,500px );
+         justify-content: center;
+      }
+      .hero__img {
+         display: none;
+      }
+      .services__container {
+         grid-template-columns: repeat(auto-fit, minmax(75px, 150px));
+      }
+ }
